@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {background: #F5F7FA
 font-family 'Montserrat', sans-serif;
 }
@@ -6,10 +12,33 @@ font-family 'Montserrat', sans-serif;
 display: flex;
 flex-direction: row-reverse;
 justify-content:center;
-width: 1200px;
+width: 100%;
 margin: 0 auto;
 background: #FFFFFF;
 box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1)}
+
+@media(max-width: 768px){
+    .wrapper{
+        flex-direction: column-reverse;
+    }
+
+     aside {
+    width: 100%;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .main-description {
+    width: 100%;
+  }
+
+  .cv-photo {
+    width: 100%;
+    height: auto;
+  }
+}
 
 aside{width: 370px;
 background: #1E2939;
@@ -52,7 +81,7 @@ list-style-position: inside;}
  }
  main {padding: 102px 88px 102px 88px;}
 .main-description{
-    Width:400px
+    width:400px
 }
 .job-title{
     font-family: Montserrat;
